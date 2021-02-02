@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Web App</title>
+    </head>
+    <body>
+        <h3>Here is the information you should add and read.</h3><br />
+        name: <input type='text' name = "namePerson" id = "namePerson" size = "20"/>
+        age: <input type='text' name = "agePerson" size = "10"/>
+        <input type="button" value="add a person" id = "button" onclick='addPerson()' /><br/>
+        Select a person to see their data:
+        <select name="people" id="selection" onchange="showData()">
+        </select>
+        <script language="javascript" src = "addOnPDList.js">
+            document.getElementById("button").onclick = addPerson(
+                document.getElementById("namePerson").getAttribute, document.getElementByName("agePerson").nodeValue
+            )
+            document.getElementById("selection").onchange = showData(
+                document.getElementById("selection").getAttribute, 
+                document.getElementById("selection").nodeValue
+            )
+        </script>
+        <p name="person" id="personSelected"></p>
+    </body>
+</html>
